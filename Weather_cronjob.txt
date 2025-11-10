@@ -1,0 +1,4 @@
+# Runs the weather.sh script every 5 minutes
+# To activate, run: crontab weather_cronjob.txt
+
+*/5 * * * * /home/weather/weather.sh
