@@ -9,7 +9,7 @@ temperature and visibility.*/
 create table current_weather_load(
 station_id int not null,
 station_city varchar(50), -- Setting to 50 characters as most city names don't exceed that. 
-station_state varchar(3), -- Setting it to varchar(3) to give some flexibility for future additions of other states.
+station_state char(2),
 station_latitude decimal(6,4),
 station_longitude decimal(7,4),
 input_datetime datetime not null, -- the date and time that the data was gathered
