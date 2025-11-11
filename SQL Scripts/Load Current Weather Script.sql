@@ -10,7 +10,7 @@ truncate table current_weather_load;
 -- Loading the data from the CSV file.
 
 load data
-local infile 'C:/Users/aggel/Downloads/weather.csv'
+local infile 'C:/Users/user_name/File/weather.csv'
 into table current_weather_load
 fields terminated by ','
 (
