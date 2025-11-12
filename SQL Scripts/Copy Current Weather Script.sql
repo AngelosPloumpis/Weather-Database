@@ -104,7 +104,7 @@ select  cw.station_id,
         wa.advisory_message,
         wa.created_at
 into outfile 'FILE_PATH.csv'
-fiels terminated by ',' 
+fields terminated by ',' 
 enclosed by '"' 
 lines terminated by '\n'
 from current_weather as cw
