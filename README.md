@@ -64,7 +64,7 @@ The script `Weather_Advisory.sql` defines the procedure `p_weather_advisory`, wh
 - `weather.sh`: A Bash script that:
   - Prompts the user for their MySQL username and password
   - Checks if a new CSV file has been received
-  - If yes, it runs the SQL scripts
+  - If yes, it runs the Load_Current_weather and Copy_Current_Weather SQL scripts
   - If not, it exits and waits for the next cron run
 
 This setup helps automate the process since the weather data might not always arrive at the same time.
@@ -75,6 +75,7 @@ This setup helps automate the process since the weather data might not always ar
 
 - The advisory table and procedure weren’t part of the original project in the book — I added them because I thought it would be helpful to highlight extreme weather conditions automatically.
 - The criteria I used for generating advisory messages are just a proof of concept. The advisory system can easily be expanded to include any conditions that would make driving unsafe — the examples in the code are just a starting point.
+- The advisory procedure is created once during the initial setup and doesn’t need to be recreated each time the system runs. The Copy_Current_Weather script simply calls it when needed. This keeps the process efficient and avoids unnecessary overhead.
 - I wrote all the SQL scripts myself. The Bash and cron scripts were adapted from the book, but I modified them to prompt for credentials and fit this project.
 - In the future, I’d like to add a simple predictive model using Python or R to forecast next-day temperatures based on the data.
 
