@@ -41,4 +41,3 @@ begin
 		);
 	end //
     delimiter ;
-drop procedure p_weather_advisory;
