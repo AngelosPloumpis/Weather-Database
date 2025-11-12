@@ -18,12 +18,12 @@ fi
 
 # Loading data into load_weather table
 mysql --local_infile=1 -h 127.0.0.1 -D weather -u "$DB_USER" -p"$DB_PASS" -s \
-    < sql/load_weather.sql > sql/load_weather.log
+    < sql/Load_Current_Weather.sql > sql/Load_Current_Weather.log
 
 # If load_weather.log is not empty, proceed to copy and advisory
 if [ ! -s sql/load_weather.log ]; then
     mysql -h 127.0.0.1 -D weather -u "$DB_USER" -p"$DB_PASS" -s \
-        < sql/copy_weather.sql > sql/copy_weather.log
+        < sql/Copy_Current_Weather.sql > sql/Copy_Current_Weather.log
 fi
 
 # Archive the original CSV with a timestamp
