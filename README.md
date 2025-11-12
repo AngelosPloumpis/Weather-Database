@@ -74,6 +74,7 @@ This setup helps automate the process since the weather data might not always ar
 ## Notes
 
 - The advisory table and procedure weren’t part of the original project in the book — I added them because I thought it would be helpful to highlight extreme weather conditions automatically.
+- The criteria I used for generating advisory messages are just a proof of concept. The advisory system can easily be expanded to include any conditions that would make driving unsafe — the examples in the code are just a starting point.
 - I wrote all the SQL scripts myself. The Bash and cron scripts were adapted from the book, but I modified them to prompt for credentials and fit this project.
 - In the future, I’d like to add a simple predictive model using Python or R to forecast next-day temperatures based on the data.
 
