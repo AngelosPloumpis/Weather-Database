@@ -1,4 +1,4 @@
-# Weather-Database
+# Weather Database
 
 This is a MySQL project that takes in a CSV file with weather data, checks and cleans it, and then uses a stored procedure to create a table with weather advisories for extreme conditions. After that, the final weather table is joined with the advisory table so users can see everything in one place.
 
