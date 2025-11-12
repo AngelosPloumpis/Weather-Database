@@ -52,4 +52,3 @@ where cw.station_id not in
     select cwl.station_id
     from current_weather_load as cwl
 );
-select * from current_weather_load;
