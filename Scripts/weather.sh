@@ -5,18 +5,18 @@
 # Change to the directory where the script and weather.csv are located
 cd "$(dirname "$0")"
 
-# Prompt for MySQL credentials
+# Prompting for MySQL credentials
 read -p "Enter MySQL username: " DB_USER
 read -s -p "Enter MySQL password: " DB_PASS
 echo
 
-# Check if weather.csv exists
+# Checking if weather.csv exists
 if [ ! -f weather.csv ]; then 
     echo "No weather.csv file found. Exiting."
     exit 0
 fi
 
-# Load data into load_weather table
+# Loading data into load_weather table
 mysql --local_infile=1 -h 127.0.0.1 -D weather -u "$DB_USER" -p"$DB_PASS" -s \
     < sql/load_weather.sql > sql/load_weather.log
 
