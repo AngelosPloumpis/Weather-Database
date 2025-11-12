@@ -49,6 +49,6 @@ create table weather_advisory
 	station_id int not null,
     station_city varchar(50),
 	advisory_message varchar(200),
-    created_at datetime default now()
+    created_at datetime default now(),
 	primary key(station_id)
 );
